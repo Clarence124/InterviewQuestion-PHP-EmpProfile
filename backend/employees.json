@@ -1,0 +1,34 @@
+[
+    {
+        "employee_name": "Muhammad Patrick bin Mat",
+        "gender": "male",
+        "marital_status": "married",
+        "phone": "143782783",
+        "email": "pat.mat@company.com",
+        "address": "Georgetown,Penang",
+        "dob": "1991-06-13",
+        "nationality": "Malaysian",
+        "hire_date": "2026-05-03",
+        "department": "Engineering",
+        "position": "Senior Process Engineer I",
+        "id": "EMP-0001",
+        "created_at": "2026-05-03 14:03:37",
+        "updated_at": null
+    },
+    {
+        "employee_name": "Shiew Chew Yan",
+        "gender": "female",
+        "marital_status": "single",
+        "phone": "169839740",
+        "email": "chew.sh@company.com",
+        "address": "Seberang Perai,Penang",
+        "dob": "2001-05-09",
+        "nationality": "Singaporean",
+        "hire_date": "2023-04-03",
+        "department": "Human Resources",
+        "position": "Senior HR Manager",
+        "id": "EMP-0002",
+        "created_at": "2026-05-03 14:50:09",
+        "updated_at": null
+    }
+]
