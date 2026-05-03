@@ -60,22 +60,6 @@ A banner appears at the bottom of the page for 6 seconds telling you which mode 
 ---
 
 ## How to Run
-
-### Option A — No server needed (File mode)
-
-1. Download or extract the project folder
-2. Double-click `index.html`
-
-That's it. The app runs entirely in the browser using `localStorage`. Data persists between sessions in the same browser.
-
-> Limitation: data only exists in that browser. `employees.json` will not be updated.
-
----
-
-### Option B — With PHP server (recommended)
-
-This mode connects the frontend to `backend/api.php` and saves all data into `backend/employees.json`.
-
 #### Step 1 — Install PHP (no admin required)
 
 If `php` is not installed:
@@ -220,39 +204,6 @@ All routes go through `backend/api.php`.
 
 ---
 
-## Import File Format
-
-### JSON format
-
-```json
-[
-  {
-    "employeeName":  "Ahmad Faris",
-    "gender":        "male",
-    "maritalStatus": "single",
-    "dateOfBirth":   "1990-05-12",
-    "nationality":   "Malaysian",
-    "phoneNo":       "0123456789",
-    "email":         "ahmad@company.com",
-    "address":       "No. 5, Jalan Harmoni, Penang",
-    "department":    "Engineering",
-    "jobTitle":      "Developer",
-    "hireDate":      "2022-01-10"
-  }
-]
-```
-
-### CSV format
-
-```
-employeeName,gender,maritalStatus,dateOfBirth,nationality,phoneNo,email,address,department,jobTitle,hireDate
-Ahmad Faris,male,single,1990-05-12,Malaysian,0123456789,ahmad@company.com,"No. 5 Jalan Harmoni",Engineering,Developer,2022-01-10
-```
-
-Common column name aliases are also accepted (e.g. `Full Name`, `Email Address`, `Phone`, `Start Date`, `Position`).
-
----
-
 ## Tech Stack
 
 | Layer | Technology |
@@ -264,20 +215,3 @@ Common column name aliases are also accepted (e.g. `Full Name`, `Email Address`,
 | No dependencies | No npm, no composer, no frameworks |
 
 ---
-
-## Common Problems
-
-**`php` not recognised in PowerShell**
-PHP is not installed or not in PATH. Use the full path: `C:\Users\YourName\php\php.exe -S localhost:8000`
-
-**`Not Found — /index.html`**
-You started PHP from inside the `backend/` folder. Always run from the project root where `index.html` lives.
-
-**API returns data but form still uses localStorage**
-The page was opened as `file://` instead of `http://`. Make sure you open `http://localhost:8000/index.html`, not by double-clicking.
-
-**`employees.json` permission error**
-The `backend/` folder must be writable by PHP. On Windows this is usually automatic. On Linux/Mac run: `chmod 755 backend/`
-
-**Data not showing after adding employee**
-Click the **Refresh** button on the employee list, or navigate to `employees.html` again. If using file mode, make sure you're on the same browser.
